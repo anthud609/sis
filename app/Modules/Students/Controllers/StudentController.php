@@ -20,10 +20,12 @@ class StudentController extends Controller
             ]
         ];
 
-$this->render('Students', 'index', [
-    'students' => $students,
-    'title' => 'All Students',
-    'breadcrumbs' => ['Home' => '/', 'Students' => '/students']
-]);
+        $this->render('Students', 'index', [
+            'students' => $students,
+            'title' => 'All Students',
+            'module' => 'Students',  // Add this
+            'view' => 'index',       // Add this
+            'breadcrumbs' => ['Home' => '/', 'Students' => '/students']
+        ]);
     }
 }
