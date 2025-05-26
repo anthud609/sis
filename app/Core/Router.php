@@ -30,7 +30,8 @@ class Router
         $controllerClass = "App\\Modules\\$module\\Controllers\\$ctrl";
 
         if (!class_exists($controllerClass)) {
-            echo "Controller $controllerClass not found";
+http_response_code(500);
+echo "500 Internal Server Error - Controller $controllerClass not found";
             return;
         }
 

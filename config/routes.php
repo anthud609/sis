@@ -1,3 +1,4 @@
 <?php
-$router->get('/', 'Students\\StudentController@index');
-$router->get('/users', 'Users\\UserController@index');
+
+// config/routes.php
+require __DIR__ . '/../app/Modules/Students/routes.php';
